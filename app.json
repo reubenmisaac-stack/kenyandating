@@ -1,0 +1,40 @@
+{
+  "name": "Kenya Dating",
+  "description": "Modern dating website for Kenyans",
+  "repository": "https://github.com/reubenmisaac-stack/kenyandating",
+  "keywords": ["dating", "kenya", "nodejs", "express"],
+  "buildpacks": [
+    {
+      "name": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "PORT": {
+      "description": "Server port",
+      "value": "5000",
+      "required": false
+    },
+    "JWT_SECRET": {
+      "description": "JWT secret for authentication",
+      "value": "your_jwt_secret_key_change_this",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

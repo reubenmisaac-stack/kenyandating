@@ -1,0 +1,19 @@
+name: Kenya Dating
+description: Modern Dating Website for Kenyans
+deployButton:
+  spec:
+    name: kenyandating
+    packages:
+      - type: npm
+        spec: package.json
+    env:
+      - key: PORT
+        value: "5000"
+      - key: JWT_SECRET
+        value: kenyandating-secret-2026
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: ./data/dating.db
+    buildCommand: npm install
+    startCommand: npm start
